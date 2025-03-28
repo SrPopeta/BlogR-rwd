@@ -4,5 +4,10 @@ html{
 body{
     background-color: darkorchid;
     font-size: 1.4rem;
-
+}
+.container{
+    border: 2px dotted black;
+    max-width: 96vw;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
