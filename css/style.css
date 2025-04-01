@@ -1,3 +1,11 @@
+:root{
+    /* colores */
+    --Sunburnt-Cyclops: #ff4758;
+    --Jacarta: #3a3d5c;
+    --Dark-Gunmetal: #24242c;
+    /* fuentes */
+    --reset-fontsize: 62.5%;
+}
 html,
 body{
     height: 100%;
@@ -5,10 +13,9 @@ body{
     padding: 0;
 }
 html{
-    font-size: 62.5%
+    font-size: var(--reset-fontsize);
 }
 body{
-    background-color: darkorchid;
     font-size: 1.4rem;
 }
 .main-container{
@@ -16,11 +23,46 @@ body{
     display: flex;
     flex-direction: column;
 }
+/* HEADER */
+.header{
+    background-color: var(--Sunburnt-Cyclops);
+}
+
+.navbar{
+    display: flex;   
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__right{
+    display: none;
+}
+
+.menu-main{
+    display: flex;
+  
+}
+.menu-login{
+    display: flex;
+}
+
+
+/* HEADER */
+/* MAIN */
 .main{
     flex-grow: 1;
     max-height: 100vh;
     height: 100vh;
 }
+/* MAIN */
+/* FOOTER */
+.footer{
+    background-color: var(--Dark-Gunmetal);
+}
+/* FOOTER */
+
+
+/* Media Queries */
 .container{
     border: 2px dotted black;
     max-width: 96vw;
@@ -36,26 +78,29 @@ body{
     padding: 0;
 }
 
-/* Media Queries */
-@media (min-width:56.7rem) {
+@media (min-width:567px) {
     .container{
         max-width: 56rem;
         padding: 0 1.6px;
     }
+    
 }
-@media(min-width:76.8rem){
+@media(min-width:768px){
     .container{
         max-width: 72rem;
         padding: 0 2.4px;
     }
+    .navbar__right{
+        display: block;
+    }    
 }
-@media (min-width:99.2rem){
+@media (min-width:992px){
     .container{
         max-width: 98rem;
         padding: 0 3.2px;
     }
 }
-@media (min-width:120rem){
+@media (min-width:1200px){
     .container{
         max-width: 114rem;
         padding: 0 4rem;
